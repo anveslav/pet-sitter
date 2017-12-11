@@ -31,6 +31,7 @@ public class CIBeansTest {
         ComplexBeanImpl complexBean1 = (ComplexBeanImpl) ctx.getBean("complexBean1");
         assertNotNull(complexBean0.getSimpleBean());
         assertNotNull(complexBean1.getSimpleBean());
+        assertTrue(complexBean1.isComplex());
         ComplexBean2Impl complexBean2 = (ComplexBean2Impl) ctx.getBean("complexBean2");
         assertNotNull(complexBean2.getSimpleBean1());
         assertNotNull(complexBean2.getSimpleBean2());
