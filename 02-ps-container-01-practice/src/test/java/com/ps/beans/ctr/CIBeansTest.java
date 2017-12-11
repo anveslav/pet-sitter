@@ -37,6 +37,6 @@ public class CIBeansTest {
         assertNotNull(complexBean2.getSimpleBean2());
 
 
-        //TODO 3. Retrieve beans of types ComplexBean and make sure their dependencies were correctly set.
+//        TODO 3. Retrieve beans of types ComplexBean and make sure their dependencies were correctly set.
     }
 }

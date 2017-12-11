@@ -1,5 +1,7 @@
 package com.ps.beans.set;
 
+import com.ps.beans.set.ComplexBean2Impl;
+import com.ps.beans.set.ComplexBeanImpl;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +26,13 @@ public class SIBeansTest {
         for(String beanName :  ctx.getBeanDefinitionNames()) {
             logger.info("Bean " + beanName + " of type " + ctx.getBean(beanName).getClass().getSimpleName());
         }
+com.ps.beans.set.ComplexBeanImpl complexBean0 = (com.ps.beans.set.ComplexBeanImpl) ctx.getBean("complexBean0");
+        com.ps.beans.set.ComplexBeanImpl complexBean1 = (ComplexBeanImpl) ctx.getBean("complexBean1");
+        assertNotNull(complexBean0.getSimpleBean());
+        assertNotNull(complexBean1.getSimpleBean());
+        assertTrue(complexBean1.isComplex());
+        com.ps.beans.set.ComplexBean2Impl complexBean2 = (ComplexBean2Impl) ctx.getBean("complexBean2");
+        assertNotNull(complexBean2.getSimpleBean());
 
-        //TODO 4. Retrieve beans of types ComplexBean and make sure their dependencies were correctly set.
     }
 }
